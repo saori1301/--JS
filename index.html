@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Know Your Carbon</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript"></script>
+    <script src="js/total.js"></script>
+   
+</head>
+<body>
+
+
+
+    <!-- ここからナビゲーション -->
+    <section class="start">
+        
+        <div class= "nav-inner">
+            <img src="./img/header_logo.png" alt="" 
+            style="vertical-align: baseline;" class="companylogo">  
+            
+
+            <div class="navigation-container">
+                <ul class="navigation">
+                <li class="nav-item"><a href="#about">About</a> </li>
+                <li class="nav-item"><a href="#calculation">Calculation</a></li>
+                <li class="nav-item"><a href="#offset">Offset</a></li>
+                </ul>
+            </div>
+        </div>
+        
+    </section>
+    <!-- ここまでナビゲーション -->
+
+        <!-- ここはメイン画像 -->
+        <div class="eyecatch" id="eyecatch1">
+            <img src="./img/mainbg.png" alt="" 
+            style="vertical-align: bottom;">
+                <p class="eyecatch-copy1">Know Your Carbon</p>
+                <p class="eyecatch-copy2">企業の明日からの脱炭素経営を支える</p>   
+            
+        </div>
+        <!-- ここまでメイン画像 -->
+
+
+
+    <!-- ここはabout-->
+
+    <div id="about" class="container">
+        <h2 class="section-title">About</h2>
+        
+        <p class="section-text">Know Your Carbonは、企業の脱炭素経営を支えるプラットフォームです。</p>
+        <p class="section-text">カーボンニュートラル実現に向けた全世界的な動きが加速する中、<br>
+        排出量を可視化・削減しないと市場から淘汰される時代がすぐそこに来ています。</p>
+        <p class="section-text">Know Your Carbonは企業の明日からの脱炭素経営をサポートします。</p>
+        </p>
+    </div>
+
+
+    
+    <!-- ここまでabout -->
+
+    <!-- ここからcalculation -->
+    
+    <div id="calculation" class="container">
+        <h2 class="section-title">Calculation</h2>
+        <p class="section-text">1ヶ月に利用した各交通機関の移動距離を入力してください。<br>
+            合計のCO2排出量が自動計算されます。</p>
+    
+    </div>
+    
+    
+        <div class="table1" onload="reCalc();">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>乗物</th>
+                            <th>係数　　</th>
+                            <th>距離　　</th>
+                            <th>排出量</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>  　　飛行機　　  </th>
+                            <td>
+                                <input type="number" id="tanka_001" name="tanka_001" readonly value="96">　×　 
+                            </td>
+                            <td>
+                                <input type="number" id="suryo_001" name="suryo_001" value="3" onchange="reCalc();"> km=　
+                            </td>
+                            <td>
+                                <input type="number" id="yokokei_001" name="yokokei_001" readonly value="0"> g
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>  　　電車　　  </th>
+                            <td>
+                                <input type="number" id="tanka_002" name="tanka_002" readonly value="20">　×　 
+                             </td>
+                            <td>
+                                <input type="number" id="suryo_002" name="suryo_002" value="2" onchange="reCalc();"> km=　
+                            </td>
+                            <td>
+                                <input type="number" id="yokokei_002" name="yokokei_002" readonly value="0"> g
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>  　　自動車　　  </th>
+                            <td>
+                                <input type="number" id="tanka_003" name="tanka_003" readonly value="145">　×　 
+                            </td>
+                            <td>
+                                <input type="number" id="suryo_003" name="suryo_003" value="1" onchange="reCalc();"> km=　
+                            </td>
+                            <td>
+                                <input type="number" id="yokokei_003" name="yokokei_003" readonly value="0"> g
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th colspan="3">総合計</th>
+                            <td>
+                                <input type="number" id="total" name="total" readonly value="0"> g
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+                </div>
+
+   
+        
+<!-- ここまでcalculation------------->
+    
+            
+<!-- ここからoffset -------------->
+
+    <section id="offset" class="offset">
+            <div>
+                <h2 class="section-title">Offset</h2>
+                <p class="section-name">
+                    自助努力では削減困難なCO2排出量をオフセット(埋め合わせ)する方法のご紹介です。</p>
+            
+
+
+                <ul class="works-list">
+                    <li class="works-item">
+                        <a href="#"><div class="slide-left"><img src="./img/item1.jpg" alt=""></div></a>
+                        <p class="date-products">クレジット購入</p>
+                        <p class="explanation">Jクレジット制度を利用してカーボンクレジットを
+                            購入していただくことによって、自助努力では削減が困難な排出量の相殺ができます。
+                            </p> 
+                        
+                    </li>
+
+                    <li class="works-item">
+                        <a href="#"><div class="slide-bottom"><img src="./img/item3.jpg" alt=""></div></a>
+                        <p class="date-products">グリーン電力証書購入</p>
+                        <p class="explanation">グリーン電力証書を購入していただくことによって、
+                            それに相当する分の電力量は、再生可能エネルギーを消費したものとみなされます。</p>
+                    </li>    
+
+                    <li class="works-item">
+                        <a href="#"><div class="slide-right"><img src="./img/item2.jpg" alt=""></div></a>
+                        <p class="date-products">森林保全・植林</p>
+                        <p class="explanation">森林の保全や植林活動を行うことにより空気中のCO2
+                            を吸収する量を増やすことにとって、相当する分の排出量を削減したとみなされます。</p>
+                    
+                    </li>
+
+                
+                </ul>
+            </div>
+    
+
+            <div class="sakuhin">
+                    <a href="#" class="btn">More</a>
+            </div>
+    </section>
+
+ <!-- ここまでoffset -->
+  
+
+
+
+    <!-- ここからフッター -->
+    <footer class="footer text-center">
+        <div class="wrapper">
+            <a href="#" class="btn-pagetop" id="btn"><span class="fa fa-angle-up icon-up"></span></a>
+            <small class="copyrights">copyrights 2022 Know Your Carbon All RIghts Reserved.</small>
+        </div>
+    </footer>
+        
+    
+    <!-- ここまでフッター -->
+    
+    
+<script>
+    function gyo(obj)
+{
+    return obj.parentElement.parentElement ;
+}
+
+// 指定したエレメント(input)と同じ行にある単価を取得
+function tanka(obj)
+{
+    return gyo(obj).querySelectorAll("input[id^=tanka]")[0].value ;
+}
+
+// 指定したエレメント(input)と同じ行にある数量を取得
+function suryo(obj)
+{
+    return gyo(obj).querySelectorAll("input[id^=suryo]")[0].value ;
+}
+
+// 指定したエレメント(input)の横計(単価×数量)を再計算してから取得
+function yokokei(obj)
+{
+    result = Number(tanka(obj)) * Number(suryo(obj));
+    gyo(obj).querySelectorAll("input[id^=yokokei]")[0].value = result ;
+    return result ;
+}
+
+// 総合計を再計算
+function tatekei()
+{
+    prices = Array.from(document.querySelectorAll("input[id^=yokokei]")).map(element => Number(yokokei(element))) ;
+    result = prices.reduce(function(sum,element){
+        return sum + element ;
+    });
+    return result;
+}
+
+// 再計算
+function reCalc()
+{
+    document.getElementById("total").value = tatekei();
+    return;
+}
+</script>
+   
+        
+
+    
+        
+
+
+ 
+
+
+    
+</body>
+
+
+</html>
+
